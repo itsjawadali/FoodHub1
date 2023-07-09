@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import RestaurantCard from "../Components/RestaurantCard";
 import Footer from "../Components/Footer";
 
+import pizzaHead from '../img/pizza/pizzaHead.jpg'
 import pizza1 from '../img/pizza/pizza1.jpeg'
 import pizza2 from '../img/pizza/pizza2.jpeg'
 import pizza3 from '../img/pizza/pizza3.jpg'
@@ -104,12 +105,24 @@ function Pizza() {
   return (
     <>
       <Navbar />
-      <div style={{ backgroundColor: "#B8C6D9" }}>
-        <div className="container md:p-20">
-          <div className="bg-white rounded overflow-hidden shadow-lg p-10">
-            <div class="font-bold text-2xl text-center text-stone-600">
-              Pizza Points
+      <div className="bg-cyan-50">
+      <div class="relative">
+          <div
+            class="bg-cover bg-center h-64 md:h-80"
+            style={{
+              backgroundImage: `url(${pizzaHead})`,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div class="flex items-center justify-center h-full">
+            <div class="font-bold text-2xl md:text-4xl text-center text-white">
+              Pizza
             </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="rounded overflow-hidden shadow-lg p-10">
             <div class="container mt-10 grid lg:grid-cols-2 gap-10 sm:grid-cols-1">
               {pizzaPoints.map((item) => {
                 return <RestaurantCard item = {item}/>

@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50" style={{backgroundColor:'#8596A6'}}>
+    <nav className="sticky top-0 z-50" style={{backgroundColor:'#1f5473'}}>
       <div className="max-w-7xl mx-auto px-6 lg:py-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">

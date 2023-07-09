@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Components/Footer";
-
+import fastfoodHead from '../img/fastFood/fastfoodHead.jpg'
 import fastfood1 from '../img/fastFood/fastfood1.jpeg'
 import fastfood2 from '../img/fastFood/fastfood2.jpg'
 import fastfood3 from '../img/fastFood/fastfood3.jpg'
@@ -105,12 +105,24 @@ function FastFood() {
   return (
     <>
       <Navbar />
-      <div style={{ backgroundColor: "#B8C6D9" }}>
-        <div className="container md:p-20">
-          <div className="bg-white rounded overflow-hidden shadow-lg p-10">
-            <div class="font-bold text-2xl text-center text-stone-600">
+      <div className="bg-cyan-50">
+      <div class="relative">
+          <div
+            class="bg-cover bg-center h-64 md:h-80"
+            style={{
+              backgroundImage: `url(${fastfoodHead})`,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div class="flex items-center justify-center h-full">
+            <div class="font-bold text-2xl md:text-4xl text-center text-white">
               Fast Food
             </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="rounded overflow-hidden shadow-lg p-10">
             <div class="container mt-10 grid lg:grid-cols-2 gap-10 sm:grid-cols-1">
               {fastFood.map((item) => {
                 return (

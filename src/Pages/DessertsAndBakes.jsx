@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../Components/Footer";
 
+import dbHead from '../img/dessertAndBakes/dbHead.jpg'
 import db1 from '../img/dessertAndBakes/db1.jpg'
 import db2 from '../img/dessertAndBakes/db2.jpg'
 import db3 from '../img/dessertAndBakes/db3.jpg'
@@ -72,12 +73,24 @@ function DessertsAndBakes() {
   return (
     <>
       <Navbar />
-      <div style={{ backgroundColor: "#B8C6D9" }}>
-        <div className="container md:p-20">
-          <div className="bg-white rounded overflow-hidden shadow-lg p-10">
-            <div class="font-bold text-2xl text-center text-stone-600">
-            Desserts and Bakes
+      <div className="bg-cyan-50">
+      <div class="relative">
+          <div
+            class="bg-cover bg-center h-64 md:h-80"
+            style={{
+              backgroundImage: `url(${dbHead})`,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div class="flex items-center justify-center h-full">
+            <div class="font-bold text-2xl md:text-4xl text-center text-white">
+              Desserts and Bakes
             </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="rounded overflow-hidden shadow-lg p-10">
             <div class="container mt-10 grid lg:grid-cols-2 gap-10 sm:grid-cols-1">
               {dessertsAndBakes.map((item) => {
                 return (
